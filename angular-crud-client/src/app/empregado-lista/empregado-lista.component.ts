@@ -1,7 +1,7 @@
 import { EmpregadoDetalhesComponent } from "../empregado-detalhes/empregado-detalhes.component";
 import { Observable } from "rxjs";
 import { EmpregadoService } from "../empregado.service";
-import { Empregado } from "../Empregado";
+import { Empregado } from "../empregado";
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -37,6 +37,10 @@ export class EmpregadoListaComponent implements OnInit {
 
   empregadoDetalhes(id: number) {
     this.router.navigate(['detalhes', id])
+  }
+
+  atualizarEmpregado(id: number){
+    this.router.navigate(['atualizar', id]);
   }
 
 }

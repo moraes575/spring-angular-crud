@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Empregado } from '../Empregado';
+import { Empregado } from '../empregado';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmpregadoService } from '../empregado.service'
 

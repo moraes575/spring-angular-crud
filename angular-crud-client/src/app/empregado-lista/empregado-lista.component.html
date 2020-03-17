@@ -15,13 +15,13 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let empregado of empregados">
+                <tr *ngFor="let empregado of empregados | async">
                     <td>{{empregado.nome}}</td>
                     <td>{{empregado.sobrenome}}</td>
                     <td>{{empregado.email}}</td>
                     <td><button (click)="deleteEmpregado(empregado.id)" class="btn btn-danger">Apagar</button>
-                        <button (click)="empregadoDetalhes(empregado.id)" class="btn btn-info"
-                            style="margin-left: 10px">Detalhes</button>
+                        <button (click)="atualizarEmpregado(empregado.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+                        <button (click)="empregadoDetalhes(empregado.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
                     </td>
                 </tr>
             </tbody>

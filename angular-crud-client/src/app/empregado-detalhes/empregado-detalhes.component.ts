@@ -1,4 +1,4 @@
-import { Empregado } from '../Empregado';
+import { Empregado } from '../empregado';
 import { Component, OnInit, Input } from '@angular/core';
 import { EmpregadoService } from '../empregado.service';
 import { EmpregadoListaComponent } from '../empregado-lista/empregado-lista.component';

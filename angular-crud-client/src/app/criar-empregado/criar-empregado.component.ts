@@ -1,5 +1,5 @@
 import { EmpregadoService } from '../empregado.service';
-import { Empregado } from '../Empregado';
+import { Empregado } from '../empregado';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class CriarEmpregadoComponent implements OnInit {
 
   empregado: Empregado = new Empregado()
-  submitted = false;
+  submitted = false
 
   constructor(private empregadoService: EmpregadoService,
     private router: Router) { }
