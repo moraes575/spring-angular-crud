@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Empregado } from '../empregado';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EmpregadoService } from '../empregado.service'
+import { EmpregadoService } from '../empregado.service';
 
 @Component({
   selector: 'app-atualizar-empregado',
@@ -12,6 +12,7 @@ export class AtualizarEmpregadoComponent implements OnInit {
 
   id: number
   empregado: Empregado
+  submitted = false
 
   constructor(private route: ActivatedRoute, private router: Router,
     private empregadoService: EmpregadoService) { }
@@ -31,17 +32,18 @@ export class AtualizarEmpregadoComponent implements OnInit {
 
   atualizarEmpregado() {
     this.empregadoService.atualizarEmpregado(this.id, this.empregado)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.empregado = new Empregado();
-    this.gotoList();
+      .subscribe(data => console.log(data), error => console.log(error))
+    this.empregado = new Empregado()
+    this.gotoList()
   }
 
   onSubmit() {
-    this.atualizarEmpregado();
+    this.submitted = true
+    this.atualizarEmpregado()
   }
 
   gotoList() {
-    this.router.navigate(['/empregados']);
+    this.router.navigate(['/empregados'])
   }
 
 }

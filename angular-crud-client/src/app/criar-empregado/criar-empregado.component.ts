@@ -29,6 +29,7 @@ export class CriarEmpregadoComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error))
     this.empregado = new Empregado()
     this.goToList()
+
   }
 
   onSubmit() {

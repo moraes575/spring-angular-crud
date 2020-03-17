@@ -7,11 +7,11 @@ import { AtualizarEmpregadoComponent } from './atualizar-empregado/atualizar-emp
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'empregado', pathMatch: 'full' },
+  { path: '', redirectTo: 'empregados', pathMatch: 'full' },
   { path: 'empregados', component: EmpregadoListaComponent },
   { path: 'adicionar', component: CriarEmpregadoComponent },
   { path: 'atualizar/:id', component: AtualizarEmpregadoComponent },
-  { path: 'detlhes/:id', component: EmpregadoDetalhesComponent },
+  { path: 'detalhes/:id', component: EmpregadoDetalhesComponent },
 ];
 
 @NgModule({

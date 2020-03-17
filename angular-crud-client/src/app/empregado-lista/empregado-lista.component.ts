@@ -1,4 +1,3 @@
-import { EmpregadoDetalhesComponent } from "../empregado-detalhes/empregado-detalhes.component";
 import { Observable } from "rxjs";
 import { EmpregadoService } from "../empregado.service";
 import { Empregado } from "../empregado";
@@ -18,21 +17,21 @@ export class EmpregadoListaComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.reloadData();
+    this.reloadData()
   }
 
   reloadData() {
-    this.empregados = this.empregadoService.getEmpregadosLista();
+    this.empregados = this.empregadoService.getEmpregadosLista()
   }
 
   deleteEmpregado(id: number) {
     this.empregadoService.deleteEmpregado(id)
       .subscribe(
         data => {
-          console.log(data);
-          this.reloadData();
+          console.log(data)
+          this.reloadData()
         },
-        error => console.log(error));
+        error => console.log(error))
   }
 
   empregadoDetalhes(id: number) {
@@ -40,7 +39,7 @@ export class EmpregadoListaComponent implements OnInit {
   }
 
   atualizarEmpregado(id: number){
-    this.router.navigate(['atualizar', id]);
+    this.router.navigate(['atualizar', id])
   }
 
 }

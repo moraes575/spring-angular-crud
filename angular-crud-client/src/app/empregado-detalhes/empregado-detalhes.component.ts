@@ -19,20 +19,20 @@ export class EmpregadoDetalhesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.empregado = new Empregado();
+    this.empregado = new Empregado()
 
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id']
 
     this.empregadoService.getEmpregado(this.id)
       .subscribe(data => {
         console.log(data)
-        this.empregado = data;
-      }, error => console.log(error));
+        this.empregado = data
+      }, error => console.log(error))
 
   }
 
   list() {
-    this.router.navigate(['empregados']);
+    this.router.navigate(['empregados'])
   }
 
 }
