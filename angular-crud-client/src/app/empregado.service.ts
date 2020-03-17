@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmpregadoService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/empregados';
+  private baseUrl = 'https://java-spring-crud.herokuapp.com/empregados'
 
   constructor(private http: HttpClient) { }
 
